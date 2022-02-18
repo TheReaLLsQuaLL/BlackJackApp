@@ -33,9 +33,15 @@ function startGame() {
 
 function renderGame(){
     cardEl.textContent = "Cards: " ;
+    const lastCard = cards.length - 1;
 
     for(let i = 0; i < cards.length; i ++) {
-        cardEl.textContent += cards[i] + "-" ;
+        if(i === lastCard){
+            cardEl.textContent += cards[i];
+        }else{
+            
+            cardEl.textContent += cards[i] + "-" ;
+        }
     }
 
     sumEl.textContent = "Sum: " + sum ;
